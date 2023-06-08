@@ -22,7 +22,7 @@ In this application there was implemented the following functional:
 <img src="https://github.com/Rubical/Zenix_Film/assets/115991370/e66b8fe4-21d5-4476-8e74-1f950c8dae9d"/>
 <img src="https://github.com/Rubical/Zenix_Film/assets/115991370/977d4c02-6dbe-4d68-9c67-b29f892873f5"/>
 
-### Main page
+### Page page
 <img src="https://github.com/Rubical/Zenix_Film/assets/115991370/9b174bb7-1742-43c5-9da5-b74dec431989"/>
 <img src="https://github.com/Rubical/Zenix_Film/assets/115991370/e54aaa7b-c8aa-476c-8287-d7f6bd705d91"/>
 
