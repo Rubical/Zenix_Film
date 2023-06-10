@@ -1,19 +1,19 @@
 "use client";
 
 import { useEffect } from "react";
-import { useFilmList } from "../../../../hooks/useFilmList";
-import { useFilmFilter } from "../../../../hooks/useFilmFilter";
-import { useActions } from "../../../../hooks/useActions";
-import { useAuth } from "../../../../hooks/useAuth";
-import { useSupabaseData } from "../../../../hooks/useSupabaseData";
-import FilmCard from "../../../../components/FilmCard/FilmCard";
-import FrontFilmCard from "../../../../components/FrontFilmCard/FrontFilmCard";
-import Loader from "../../../../components/UI/Loader/Loader";
-import PagePagination from "../../../../components/UI/Pagination/Pagination";
-import SideBarLeft from "../../../../components/UI/SideBar/SideBarLeft/SideBarLeft";
-import SideBarRight from "../../../../components/UI/SideBar/SideBarRight/SideBarRight";
-import SignInBtn from "../../../../components/UI/Button/SignInBtn";
-import NavBar from "../../../../components/UI/NavBar/NavBar";
+import { useFilmList } from "../../../../_hooks/useFilmList";
+import { useFilmFilter } from "../../../../_features/filter/hooks/useFilmFilter";
+import { useActions } from "../../../../_hooks/useActions";
+import { useAuth } from "../../../../_features/auth/hooks/useAuth";
+import { useSupabaseData } from "../../../../_hooks/useSupabaseData";
+import FilmCard from "../../../../_components/FilmCard/FilmCard";
+import FrontFilmCard from "../../../../_components/FrontFilmCard/FrontFilmCard";
+import Loader from "../../../../_components/UI/Loader/Loader";
+import PagePagination from "../../../../_components/UI/Pagination/Pagination";
+import SideBarLeft from "../../../../_layouts/SideBar/SideBarLeft/SideBarLeft";
+import SideBarRight from "../../../../_layouts/SideBar/SideBarRight/SideBarRight";
+import SignInBtn from "../../../../_features/auth/components/SignInBtn";
+import Header from "../../../../_layouts/Header/Header";
 import style from "./MainScreen.module.css";
 import Link from "next/link";
 import Box from "@mui/material/Box";
@@ -54,7 +54,7 @@ const MainPage: NextPage<TypeMainPage> = ({ params: { urlPage } }) => {
           <Loader />
         ) : (
           <>
-            <NavBar />
+            <Header />
             <div className={style.background}></div>
             <div
               style={{

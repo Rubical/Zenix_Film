@@ -1,11 +1,11 @@
 "use client";
 
 import React, { ChangeEvent, useState } from "react";
-import { supabase } from "../../../../auth/auth";
-import { useAuth } from "../../../../hooks/useAuth";
-import { useActions } from "../../../../hooks/useActions";
+import { supabase } from "../../../../_features/auth/services/auth";
+import { useAuth } from "../../../../_features/auth/hooks/useAuth";
+import { useActions } from "../../../../_hooks/useActions";
 import { ThemeProvider } from "@mui/material/styles";
-import { theme } from "../../../../themes/themes";
+import { theme } from "../../../../_styles/themes";
 import Container from "@mui/material/Container";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -16,8 +16,8 @@ import Typography from "@mui/material/Typography";
 import {
   validateEmail,
   validatePassword,
-} from "../../../../utils/authValidation";
-import BackToMainBtn from "../../../../components/UI/Button/BackToMainBtn";
+} from "../../../../_utils/authValidation";
+import BackToMainBtn from "../../../../_features/auth/components/BackToMainBtn";
 import { useRouter } from "next/navigation";
 
 const Page = () => {

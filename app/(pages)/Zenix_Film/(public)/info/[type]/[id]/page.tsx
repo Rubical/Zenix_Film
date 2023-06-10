@@ -2,28 +2,28 @@
 
 import { FC, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useActions } from "../../../../../../hooks/useActions";
-import { useAuth } from "../../../../../../hooks/useAuth";
-import { useActors } from "../../../../../../hooks/useActors";
-import { useFilm } from "../../../../../../hooks/useFilm";
-import { useVideo } from "../../../../../../hooks/useVideo";
-import { usePosters } from "../../../../../../hooks/usePosters";
-import { useSimilarMovies } from "../../../../../../hooks/useSimilarMovies";
-import { useSupabaseData } from "../../../../../../hooks/useSupabaseData";
-import Loader from "../../../../../../components/UI/Loader/Loader";
-import ActorCard from "../../../../../../components/ActorCard/ActorCard";
-import FilmInfo from "../../../../../../components/FilmInfo/FilmInfo";
-import YoutubeFrame from "../../../../../../components/YoutubeFrame/YoutubeFrame";
-import PosterCard from "../../../../../../components/PosterCard/PosterCard";
-import FilmCard from "../../../../../../components/FilmCard/FilmCard";
-import SideBarLeft from "../../../../../../components/UI/SideBar/SideBarLeft/SideBarLeft";
-import SideBarRight from "../../../../../../components/UI/SideBar/SideBarRight/SideBarRight";
-import SignInBtn from "../../../../../../components/UI/Button/SignInBtn";
-import NavBar from "../../../../../../components/UI/NavBar/NavBar";
+import { useActions } from "../../../../../../_hooks/useActions";
+import { useAuth } from "../../../../../../_features/auth/hooks/useAuth";
+import { useActors } from "../../../../../../_features/info/hooks/useActors";
+import { useFilm } from "../../../../../../_features/info/hooks/useFilm";
+import { useVideo } from "../../../../../../_hooks/useVideo";
+import { usePosters } from "../../../../../../_features/info/hooks/usePosters";
+import { useSimilarMovies } from "../../../../../../_features/info/hooks/useSimilarMovies";
+import { useSupabaseData } from "../../../../../../_hooks/useSupabaseData";
+import Loader from "../../../../../../_components/UI/Loader/Loader";
+import ActorCard from "../../../../../../_features/info/components/actorCard/ActorCard";
+import FilmInfo from "../../../../../../_features/info/components/filmInfo/FilmInfo";
+import YoutubeFrame from "../../../../../../_features/info/components/youtubeFrame/YoutubeFrame";
+import PosterCard from "../../../../../../_features/info/components/posterCard/PosterCard";
+import FilmCard from "../../../../../../_components/FilmCard/FilmCard";
+import SideBarLeft from "../../../../../../_layouts/SideBar/SideBarLeft/SideBarLeft";
+import SideBarRight from "../../../../../../_layouts/SideBar/SideBarRight/SideBarRight";
+import SignInBtn from "../../../../../../_features/auth/components/SignInBtn";
+import Header from "../../../../../../_layouts/Header/Header";
 import cl from "./FilmScreen.module.css";
 import backgroundImg from "./background-img-placeholder.jpg";
-import { firstLetterToUpperCase } from "../../../../../../utils/firstLetterToUpperCase";
-import { toHoursAndMinutes } from "../../../../../../utils/convertToHoursAndMinutes";
+import { firstLetterToUpperCase } from "../../../../../../_utils/firstLetterToUpperCase";
+import { toHoursAndMinutes } from "../../../../../../_utils/convertToHoursAndMinutes";
 import CardCover from "@mui/joy/CardCover";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
@@ -86,7 +86,7 @@ const InfoPage: FC<TypePageId> = ({ params: { id, type } }) => {
           <Loader />
         ) : (
           <>
-            <NavBar />
+            <Header />
             <Container>
               <CardCover
                 sx={{

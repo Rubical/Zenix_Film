@@ -2,7 +2,7 @@
 
 import Providers from "./_layouts/Providers";
 import "./_assets/reset.css";
-import Footer from "./components/UI/Footer/Footer";
+import Footer from "./_layouts/Footer/Footer";
 
 export default function RootLayout({
   children,

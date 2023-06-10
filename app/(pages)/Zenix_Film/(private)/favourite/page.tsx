@@ -1,18 +1,18 @@
 "use client";
 
 import React, { FC, useEffect } from "react";
-import { useFavouriteFilms } from "../../../../hooks/useFavouriteFilms";
-import { useAuth } from "../../../../hooks/useAuth";
-import SideBarLeft from "../../../../components/UI/SideBar/SideBarLeft/SideBarLeft";
-import NavBar from "../../../../components/UI/NavBar/NavBar";
-import SideBarRight from "../../../../components/UI/SideBar/SideBarRight/SideBarRight";
-import SignInBtn from "../../../../components/UI/Button/SignInBtn";
-import FilmCard from "../../../../components/FilmCard/FilmCard";
+import { useFavouriteFilms } from "../../../../_features/favourite/hooks/useFavouriteFilms";
+import { useAuth } from "../../../../_features/auth/hooks/useAuth";
+import SideBarLeft from "../../../../_layouts/SideBar/SideBarLeft/SideBarLeft";
+import Header from "../../../../_layouts/Header/Header";
+import SideBarRight from "../../../../_layouts/SideBar/SideBarRight/SideBarRight";
+import SignInBtn from "../../../../_features/auth/components/SignInBtn";
+import FilmCard from "../../../../_components/FilmCard/FilmCard";
 import cl from "./FavouritePage.module.css";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { useSupabaseData } from "../../../../hooks/useSupabaseData";
-import { useActions } from "../../../../hooks/useActions";
+import { useSupabaseData } from "../../../../_hooks/useSupabaseData";
+import { useActions } from "../../../../_hooks/useActions";
 
 const Page: FC = () => {
   const favouriteFilms = useFavouriteFilms();
@@ -29,7 +29,7 @@ const Page: FC = () => {
     <div className={cl.grid}>
       <SideBarLeft />
       <div className={cl.main}>
-        <NavBar />
+        <Header />
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Box
             sx={{

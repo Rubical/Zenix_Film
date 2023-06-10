@@ -1,4 +1,4 @@
-/* Reset and base styles  */
+/* Reset and base _styles  */
 html {
   overflow-y: scroll;
   background-color: black;
@@ -116,7 +116,7 @@ legend {
   display: block;
 }
 
-/* App styles */
+/* App _styles */
 
 
 

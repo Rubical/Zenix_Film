@@ -1,23 +1,23 @@
 "use client";
 
 import React, { FC, useEffect } from "react";
-import { useSearchedFilms } from "../../../../../../hooks/useSearchedFilms";
-import { useActions } from "../../../../../../hooks/useActions";
-import { useAuth } from "../../../../../../hooks/useAuth";
-import { useSupabaseData } from "../../../../../../hooks/useSupabaseData";
-import { supabase } from "../../../../../../auth/auth";
+import { useSearchedFilms } from "../../../../../../_features/search/hooks/useSearchedFilms";
+import { useActions } from "../../../../../../_hooks/useActions";
+import { useAuth } from "../../../../../../_features/auth/hooks/useAuth";
+import { useSupabaseData } from "../../../../../../_hooks/useSupabaseData";
+import { supabase } from "../../../../../../_features/auth/services/auth";
 import { PostgrestSingleResponse } from "@supabase/supabase-js";
-import { IFilmInfo } from "../../../../../../types/supabaseFilmInfo.types";
-import FilmCard from "../../../../../../components/FilmCard/FilmCard";
-import Loader from "../../../../../../components/UI/Loader/Loader";
-import PagePagination from "../../../../../../components/UI/Pagination/Pagination";
+import { IFilmInfo } from "../../../../../../_types/supabaseFilmInfo.types";
+import FilmCard from "../../../../../../_components/FilmCard/FilmCard";
+import Loader from "../../../../../../_components/UI/Loader/Loader";
+import PagePagination from "../../../../../../_components/UI/Pagination/Pagination";
 import cl from "./SearchedFilmsPage.module.css";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import SideBarLeft from "../../../../../../components/UI/SideBar/SideBarLeft/SideBarLeft";
-import SideBarRight from "../../../../../../components/UI/SideBar/SideBarRight/SideBarRight";
-import SignInBtn from "../../../../../../components/UI/Button/SignInBtn";
-import NavBar from "../../../../../../components/UI/NavBar/NavBar";
+import SideBarLeft from "../../../../../../_layouts/SideBar/SideBarLeft/SideBarLeft";
+import SideBarRight from "../../../../../../_layouts/SideBar/SideBarRight/SideBarRight";
+import SignInBtn from "../../../../../../_features/auth/components/SignInBtn";
+import Header from "../../../../../../_layouts/Header/Header";
 import { useRouter } from "next/navigation";
 
 const Page: FC = () => {
@@ -63,7 +63,7 @@ const Page: FC = () => {
           <Loader />
         ) : (
           <>
-            <NavBar />
+            <Header />
             <Box sx={{ marginTop: "120px" }}>
               {filmsFound.length ? (
                 <Box
