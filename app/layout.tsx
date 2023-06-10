@@ -1,8 +1,8 @@
 "use client";
 
-import Providers from "./_layouts/Providers";
-import "./_assets/reset.css";
-import Footer from "./_layouts/Footer/Footer";
+import Providers from "../src/layouts/Providers";
+import "../src/assets/reset.css";
+import Footer from "../src/layouts/Footer/Footer";
 
 export default function RootLayout({
   children,
