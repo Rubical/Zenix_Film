@@ -1,11 +1,11 @@
 "use client";
 
 import React, { ChangeEvent, useState } from "react";
-import { supabase } from "../../../../src/features/auth/services/auth";
-import { useAuth } from "../../../../src/features/auth/hooks/useAuth";
-import { useActions } from "../../../../src/hooks/useActions";
+import { supabase } from "../../../src/features/auth/services/auth";
+import { useAuth } from "../../../src/features/auth/hooks/useAuth";
+import { useActions } from "../../../src/hooks/useActions";
 import { ThemeProvider } from "@mui/material/styles";
-import { theme } from "../../../../src/styles/themes";
+import { theme } from "../../../src/styles/themes";
 import Container from "@mui/material/Container";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -16,8 +16,8 @@ import Typography from "@mui/material/Typography";
 import {
   validateEmail,
   validatePassword,
-} from "../../../../src/utils/authValidation";
-import BackToMainBtn from "../../../../src/features/auth/components/BackToMainBtn";
+} from "../../../src/utils/authValidation";
+import BackToMainBtn from "../../../src/features/auth/components/BackToMainBtn";
 import { useRouter } from "next/navigation";
 
 const Page = () => {

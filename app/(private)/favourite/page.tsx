@@ -1,18 +1,18 @@
 "use client";
 
 import React, { FC, useEffect } from "react";
-import { useFavouriteFilms } from "../../../../src/features/favourite/hooks/useFavouriteFilms";
-import { useAuth } from "../../../../src/features/auth/hooks/useAuth";
-import SideBarLeft from "../../../../src/layouts/SideBar/SideBarLeft/SideBarLeft";
-import Header from "../../../../src/layouts/Header/Header";
-import SideBarRight from "../../../../src/layouts/SideBar/SideBarRight/SideBarRight";
-import SignInBtn from "../../../../src/features/auth/components/SignInBtn";
-import FilmCard from "../../../../src/components/FilmCard/FilmCard";
+import { useFavouriteFilms } from "../../../src/features/favourite/hooks/useFavouriteFilms";
+import { useAuth } from "../../../src/features/auth/hooks/useAuth";
+import SideBarLeft from "../../../src/layouts/SideBar/SideBarLeft/SideBarLeft";
+import Header from "../../../src/layouts/Header/Header";
+import SideBarRight from "../../../src/layouts/SideBar/SideBarRight/SideBarRight";
+import SignInBtn from "../../../src/features/auth/components/SignInBtn";
+import FilmCard from "../../../src/components/FilmCard/FilmCard";
 import cl from "./FavouritePage.module.css";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { useSupabaseData } from "../../../../src/hooks/useSupabaseData";
-import { useActions } from "../../../../src/hooks/useActions";
+import { useSupabaseData } from "../../../src/hooks/useSupabaseData";
+import { useActions } from "../../../src/hooks/useActions";
 
 const Page: FC = () => {
   const favouriteFilms = useFavouriteFilms();

@@ -1,23 +1,23 @@
 "use client";
 
 import React, { FC, useEffect } from "react";
-import { useSearchedFilms } from "../../../../../../src/features/search/hooks/useSearchedFilms";
-import { useActions } from "../../../../../../src/hooks/useActions";
-import { useAuth } from "../../../../../../src/features/auth/hooks/useAuth";
-import { useSupabaseData } from "../../../../../../src/hooks/useSupabaseData";
-import { supabase } from "../../../../../../src/features/auth/services/auth";
+import { useSearchedFilms } from "../../../../../src/features/search/hooks/useSearchedFilms";
+import { useActions } from "../../../../../src/hooks/useActions";
+import { useAuth } from "../../../../../src/features/auth/hooks/useAuth";
+import { useSupabaseData } from "../../../../../src/hooks/useSupabaseData";
+import { supabase } from "../../../../../src/features/auth/services/auth";
 import { PostgrestSingleResponse } from "@supabase/supabase-js";
-import { IFilmInfo } from "../../../../../../src/types/supabaseFilmInfo.types";
-import FilmCard from "../../../../../../src/components/FilmCard/FilmCard";
-import Loader from "../../../../../../src/components/UI/Loader/Loader";
-import PagePagination from "../../../../../../src/components/UI/Pagination/Pagination";
+import { IFilmInfo } from "../../../../../src/types/supabaseFilmInfo.types";
+import FilmCard from "../../../../../src/components/FilmCard/FilmCard";
+import Loader from "../../../../../src/components/UI/Loader/Loader";
+import PagePagination from "../../../../../src/components/UI/Pagination/Pagination";
 import cl from "./SearchedFilmsPage.module.css";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import SideBarLeft from "../../../../../../src/layouts/SideBar/SideBarLeft/SideBarLeft";
-import SideBarRight from "../../../../../../src/layouts/SideBar/SideBarRight/SideBarRight";
-import SignInBtn from "../../../../../../src/features/auth/components/SignInBtn";
-import Header from "../../../../../../src/layouts/Header/Header";
+import SideBarLeft from "../../../../../src/layouts/SideBar/SideBarLeft/SideBarLeft";
+import SideBarRight from "../../../../../src/layouts/SideBar/SideBarRight/SideBarRight";
+import SignInBtn from "../../../../../src/features/auth/components/SignInBtn";
+import Header from "../../../../../src/layouts/Header/Header";
 import { useRouter } from "next/navigation";
 
 const Page: FC = () => {
